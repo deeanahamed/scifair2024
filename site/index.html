@@ -192,7 +192,7 @@
       }
       ::placeholder {
         color: #5c5c7a;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: sans-serif;
         font-weight: normal;
         opacity: 1;
@@ -214,7 +214,7 @@
         border: 0.2rem solid #7A52CC;
         border-radius: 0.8rem;
         padding: 0.4rem 0.8rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.4;
         transition-duration: 0.4s;
       }
@@ -248,7 +248,7 @@
         border: 0.2rem solid #7a52cc;
         border-radius: 0.8rem;
         padding: 0.4rem 0.8rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.4;
         transition-duration: 0.4s;
       }
@@ -266,13 +266,43 @@
         outline-offset: 0.2rem;
         transition-duration: 0.1s;
       }
+      .button.fullWidth {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      .button.halfWidth {
+        width: 40%;
+        font-size: 1.2rem;
+        margin-top: 0px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
       .hide {
         display: none;
       }
     </style>
   </head>
   <body>
-    <div id="input" class="flex full">
+    <div id="askAge" class="flex full">
+      <div>
+      <p class="h2">Select your age group:</p>
+      <button class="button fullWidth">Children</button> <br />
+      <button class="button fullWidth">Adults</button> <br />
+      <button class="button fullWidth">Seniors</button>
+      </div>
+    </div>
+    <div id="askGames" class="flex full hide">
+      <div>
+      <p class="h2">Do you play video games often?</p>
+      <div class="flex">
+        <button class="button halfWidth">Yes</button>
+        <button class="button halfWidth">No</button>
+      </div>
+      </div>
+    </div>
+    <div id="input" class="flex full hide">
       <button class="bigButton start" id="button"></button>
     </div>
     <div id="result" class="flex hide">
